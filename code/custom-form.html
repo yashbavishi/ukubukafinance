@@ -11,8 +11,13 @@
 	<link type="text/css" href="css/theme.css" rel="stylesheet">
 	<link type="text/css" href="images/icons/css/font-awesome.css" rel="stylesheet">
 	<link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600' rel='stylesheet'>
+	<script type="text/javascript" src="scripts/angular.js"></script>
+    <script type="text/javascript" src="scripts/angular-route.js"></script> 
+    <script src="//code.angularjs.org/1.2.13/angular-cookies.js"></script> 
+    <script type="text/javascript" src="scripts/app.js"></script> 
+    <script type="text/javascript" src="scripts/currencyConverter.js"></script> 
 </head>
-<body>
+<body ng-app="ukubukaFinance" ng-controller="currencyConverter">
 
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
@@ -191,18 +196,14 @@
 
 									<br /> -->
 
-									<form class="form-horizontal row-fluid">
+									<form class="form-horizontal row-fluid" ng-submit="getChart(form)">
 										
 										<div class="control-group">
 											<label class="control-label" for="basicinput">From</label>
 											<div class="controls">
-												<select multiple tabindex="1" data-placeholder="Select here.." class="span3" id="id1">
-													<option value="Category 1">CNY</option>
-													<option value="Category 1">CNY</option>
-													<option value="Category 1">CNY</option>
-													<option value="Category 2">INR</option>
-													<option value="Category 3">JPY</option>
-													<option value="Category 4">USD</option>
+												<select multiple required tabindex="1" data-placeholder="Select here.." class="span3" id="id1" ng-model="form.from">
+													<option ng-repeat="currency in currencies" ng-value="currency.value">{{currency.name}}
+													</option>
 												</select>
 											</div>
 										</div>
@@ -210,20 +211,17 @@
 										<div class="control-group">
 											<label class="control-label" for="basicinput">To</label>
 											<div class="controls">
-												<select multiple tabindex="1" data-placeholder="Select here.." class="span3" id="id2">
-													<option value="Category 1">CNY</option>
-													<option value="Category 1">CNY</option>
-													<option value="Category 1">CNY</option>
-													<option value="Category 2">INR</option>
-													<option value="Category 3">JPY</option>
-													<option value="Category 4">USD</option>
+												<select multiple required tabindex="1" data-placeholder="Select here.." class="span3" id="id2" ng-model="form.to">
+													<option ng-repeat="currency in currencies" ng-value="currency.value">{{currency.name}}
+													</option>
 												</select>
 											</div>
 										</div>
 
 										<div class="control-group">
 											<div class="controls">
-												<button type="submit" class="btn btn-large btn-primary" >Submit Form</button>
+												<button type="submit" class="btn btn-large btn-primary"  ng-disabled="form.$invalid">Submit</button>
+												<div>{{returnPath}}</div>
 											</div>
 										</div>
 									</form>
