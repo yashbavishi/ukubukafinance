@@ -35,6 +35,4 @@ $scope.getChart =  function(form) {
    $scope.selectDefaults();
 }
 
-
-
 });
