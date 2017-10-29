@@ -233,10 +233,10 @@
 														</a>
 														<ul id="toggleADD" class="collapse unstyled">
 															<li>
-																Source: <input type="text" name="Source">
+																Source: <input type="text" name="Source" ng-model="form.addSource">
 															</li>
 															<li>
-																Target: <input type="text" name="Target">
+																Target: <input type="text" name="Target" ng-model="form.addTarget">
 															</li>
 
 														</ul>
@@ -253,10 +253,10 @@
 														</a>
 														<ul id="toggleSUM" class="collapse unstyled">
 															<li>
-																Source: <input type="text" name="Source">
+																Source: <input type="text" name="Source" ng-model="form.sumSource">
 															</li>
 															<li>
-																Target: <input type="text" name="Target">
+																Target: <input type="text" name="Target" ng-model="form.sumSource">
 															</li>
 
 														</ul>
@@ -274,12 +274,8 @@
 														</a>
 														<ul id="toggleINCLUDE" class="collapse unstyled">
 															<li>
-																Source: <input type="text" name="Source">
+																Source: <input type="text" name="Source" ng-model="form.includeSource">
 															</li>
-															<li>
-																Target: <input type="text" name="Target">
-															</li>
-
 														</ul>
 													</li>
 													
@@ -295,10 +291,10 @@
 														</a>
 														<ul id="toggleAVG" class="collapse unstyled">
 															<li>
-																Source: <input type="text" name="Source">
+																Source: <input type="text" name="Source" ng-model="form.avgSource">
 															</li>
 															<li>
-																Target: <input type="text" name="Target">
+																Target: <input type="text" name="Target" ng-model="form.avgSource">
 															</li>
 															
 														</ul>
@@ -317,10 +313,10 @@
 														</a>
 														<ul id="toggleMIN" class="collapse unstyled">
 															<li>
-																Source: <input type="text" name="Source">
+																Source: <input type="text" name="Source" ng-model="form.minSource">
 															</li>
 															<li>
-																Target: <input type="text" name="Target">
+																Target: <input type="text" name="Target" ng-model="form.minSource">
 															</li>
 															
 														</ul>
@@ -338,10 +334,10 @@
 														</a>
 														<ul id="toggleMAX" class="collapse unstyled">
 															<li>
-																Source: <input type="text" name="Source">
+																Source: <input type="text" name="Source" ng-model="form.maxSource">
 															</li>
 															<li>
-																Target: <input type="text" name="Target">
+																Target: <input type="text" name="Target" ng-model="form.maxSource">
 															</li>
 															
 														</ul>
@@ -371,18 +367,12 @@
 						</div>
 
 
-						<div class="module">
+						<div class="module" ng-if="returnPath">
 						<!-- 	<div class="module-head">
 								<h3>Forms</h3>
 							</div> -->
-							<div class="module-body">
-
-									<form class="form-horizontal row-fluid" ng-submit="getChart(form)">
+							<div class="module-body" >
 										<iframe src="{{returnPath}}" align="middle" frameborder="0" width="100%" height="500"></iframe>
-										
-									</form>
-
-
 							</div>
 						</div>
 
