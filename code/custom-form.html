@@ -218,6 +218,118 @@
 											</div>
 										</div>
 
+																				<div class="control-group" style="width:50%">
+											<label class="control-label" for="basicinput"></label>
+											<div class="controls">
+
+												<ul class="widget widget-menu unstyled">
+													<li>
+														<a class="collapsed" data-toggle="collapse" href="#toggleADD">
+															<i class="menu-icon icon-cog"></i>
+															<i class="icon-chevron-down pull-right"></i><i class="icon-chevron-up pull-right"></i>
+															ADD
+														</a>
+														<ul id="toggleADD" class="collapse unstyled">
+															<li>
+																Source: <input type="text" name="Source">
+															</li>
+															<li>
+																Target: <input type="text" name="Target">
+															</li>
+
+														</ul>
+													</li>
+													
+												</ul>
+
+													<ul class="widget widget-menu unstyled">
+													<li>
+														<a class="collapsed" data-toggle="collapse" href="#toggleSUM">
+															<i class="menu-icon icon-cog"></i>
+															<i class="icon-chevron-down pull-right"></i><i class="icon-chevron-up pull-right"></i>
+															SUM
+														</a>
+														<ul id="toggleSUM" class="collapse unstyled">
+															<li>
+																Source: <input type="text" name="Source">
+															</li>
+															<li>
+																Target: <input type="text" name="Target">
+															</li>
+
+														</ul>
+													</li>
+													
+												</ul>
+
+
+												<ul class="widget widget-menu unstyled">
+													<li>
+														<a class="collapsed" data-toggle="collapse" href="#toggleINCLUDE">
+															<i class="menu-icon icon-cog"></i>
+															<i class="icon-chevron-down pull-right"></i><i class="icon-chevron-up pull-right"></i>
+															Include
+														</a>
+														<ul id="toggleINCLUDE" class="collapse unstyled">
+															<li>
+																Source: <input type="text" name="Source">
+															</li>
+															<li>
+																Target: <input type="text" name="Target">
+															</li>
+
+														</ul>
+												</ul>
+
+
+
+												<ul class="widget widget-menu unstyled">
+													<li>
+														<a class="collapsed" data-toggle="collapse" href="#toggleMIN">
+															<i class="menu-icon icon-cog"></i>
+															<i class="icon-chevron-down pull-right"></i><i class="icon-chevron-up pull-right"></i>
+															MIN
+														</a>
+														<ul id="toggleMIN" class="collapse unstyled">
+															<li>
+																Source: <input type="text" name="Source">
+															</li>
+															<li>
+																Target: <input type="text" name="Target">
+															</li>
+															
+														</ul>
+													</li>
+													
+												</ul>
+
+
+												<ul class="widget widget-menu unstyled">
+													<li>
+														<a class="collapsed" data-toggle="collapse" href="#toggleMAX">
+															<i class="menu-icon icon-cog"></i>
+															<i class="icon-chevron-down pull-right"></i><i class="icon-chevron-up pull-right"></i>
+															MAX
+														</a>
+														<ul id="toggleMAX" class="collapse unstyled">
+															<li>
+																Source: <input type="text" name="Source">
+															</li>
+															<li>
+																Target: <input type="text" name="Target">
+															</li>
+															
+														</ul>
+													</li>
+													
+												</ul>
+
+
+
+
+											</div>
+										</div>
+
 										<div class="control-group">
 											<div class="controls">
 												<button type="submit" class="btn btn-large btn-primary"  ng-disabled="form.$invalid">Submit</button>
@@ -225,8 +337,30 @@
 											</div>
 										</div>
 									</form>
+
+
+							</div>
+
+							
+
+						</div>
+
+
+						<div class="module">
+						<!-- 	<div class="module-head">
+								<h3>Forms</h3>
+							</div> -->
+							<div class="module-body">
+
+									<form class="form-horizontal row-fluid" ng-submit="getChart(form)">
+										<iframe src="{{returnPath}}" align="middle" frameborder="0" width="100%" height="500"></iframe>
+										
+									</form>
+
+
 							</div>
 						</div>
+
 
 						
 						
@@ -238,8 +372,6 @@
 
 	<div class="footer">
 		<div class="container">
-			 
-
 			<b class="copyright">&copy; 2014 Edmin - EGrappler.com </b> All rights reserved.
 		</div>
 	</div>
