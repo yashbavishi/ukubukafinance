@@ -1,7 +1,7 @@
 app.controller('currencyConverter', function($scope, $http, $window, $location, $anchorScroll) {
   $scope.form = {};
   $scope.masterform = {};
-  $scope.currencies = [ {name: "Rupee", value: "RUP"}, {name: "BITCNY", value: "BITCNY"}, {name: "Bitcoin", value: "BIT"}];
+  $scope.stocks = [ {name: "Apple", value: "AAPL"}, {name: "Alibaba", value: "BABA"}, {name: "Netflix", value: "NFLX"}];
   $scope.returnPath = '';
   $scope.myVar = false;
 
@@ -49,8 +49,7 @@ $scope.getChart =  function(form) {
   angular.copy($scope.form, $scope.masterform);  
   $scope.myVar = true;
   var data = {
-        "from": $scope.form.from,
-        "to": $scope.form.to,
+        "stock": $scope.form.selectedStocks,
         "operations": [
           {
             "type": "ADD",

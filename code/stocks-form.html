@@ -15,9 +15,9 @@
     <script type="text/javascript" src="scripts/angular-route.js"></script> 
     <script src="//code.angularjs.org/1.2.13/angular-cookies.js"></script> 
     <script type="text/javascript" src="scripts/app.js"></script> 
-    <script type="text/javascript" src="scripts/currencyConverter.js"></script> 
+    <script type="text/javascript" src="scripts/stocksController.js"></script> 
 </head>
-<body ng-app="ukubukaFinance" ng-controller="currencyConverter">
+<body ng-app="ukubukaFinance" ng-controller="stocksController">
 
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
@@ -201,22 +201,11 @@
 										<div class="control-group">
 											<label class="control-label" for="basicinput">From</label>
 											<div class="controls">
-												<select multiple required tabindex="1" data-placeholder="Select here.." class="span3" id="id1" ng-model="form.from">
-													<option ng-repeat="currency in currencies" ng-value="currency.value">{{currency.name}}
+												<select multiple required tabindex="1" data-placeholder="Select here.." class="span3" id="id1" ng-model="form.selectedStocks">
+													<option ng-repeat="stock in stocks" ng-value="stock.value">{{stock.name}}
 													</option>
 												</select>&nbsp
-													<span ng-repeat="option in form.from"><a class="btn btn-mini btn-success" id="tag1">{{option}}</a>&nbsp</span>
-											</div>
-										</div>
-
-										<div class="control-group">
-											<label class="control-label" for="basicinput">To</label>
-											<div class="controls">
-												<select multiple required tabindex="1" data-placeholder="Select here.." class="span3" id="id2" ng-model="form.to">
-													<option ng-repeat="currency in currencies" ng-value="currency.value">{{currency.name}}
-													</option>
-												</select>&nbsp
-													<span ng-repeat="option in form.to"><a class="btn btn-mini btn-success" id="tag1">{{option}}</a>&nbsp</span>
+													<span ng-repeat="option in form.selectedStocks"><a class="btn btn-mini btn-success" id="tag1">{{option}}</a>&nbsp</span>
 											</div>
 										</div>
 
