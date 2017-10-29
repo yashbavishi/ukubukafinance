@@ -204,7 +204,8 @@
 												<select multiple required tabindex="1" data-placeholder="Select here.." class="span3" id="id1" ng-model="form.from">
 													<option ng-repeat="currency in currencies" ng-value="currency.value">{{currency.name}}
 													</option>
-												</select>
+												</select>&nbsp
+													<span ng-repeat="option in form.from"><a class="btn btn-mini btn-success" id="tag1">{{option}}</a>&nbsp</span>
 											</div>
 										</div>
 
@@ -214,7 +215,8 @@
 												<select multiple required tabindex="1" data-placeholder="Select here.." class="span3" id="id2" ng-model="form.to">
 													<option ng-repeat="currency in currencies" ng-value="currency.value">{{currency.name}}
 													</option>
-												</select>
+												</select>&nbsp
+													<span ng-repeat="option in form.to"><a class="btn btn-mini btn-success" id="tag1">{{option}}</a>&nbsp</span>
 											</div>
 										</div>
 
